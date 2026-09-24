@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Luan Lima de Queiroz" />
+  <title>Na ponta do lápis — Escola de contabilidade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="nav">
+      <a href="#capa" data-go="capa">Capa</a>
+      <a href="#caderno" data-go="caderno">Caderno</a>
+      <a href="#trilha" data-go="trilha">Trilha</a>
+      <a href="#ranking" data-go="ranking">Ranking</a>
+      <a href="#sobre" data-go="sobre">Sobre</a>
+    </nav>
+
+    <section id="view-capa" class="sheet">
+      <p class="kicker">UNINASSAU · Ciências Contábeis</p>
+      <h1>Na ponta do lápis</h1>
+      <p class="tagline">Escola de contabilidade</p>
+      <p class="lede">Caderno gamificado de débito, crédito, DRE e balanço. Preencha a identificação do aluno para abrir as missões. O progresso fica neste aparelho.</p>
+      <form id="form-capa" style="margin-top:32px">
+        <p class="kicker">Identificação do aluno</p>
+        <div class="cover-line">
+          <label for="nome">Nome do aluno</label>
+          <input id="nome" name="nome" required minlength="2" placeholder="Nome completo" autocomplete="name" />
+        </div>
+        <div class="cover-line">
+          <label for="turma">Turma</label>
+          <input id="turma" name="turma" placeholder="Ex.: 3º período — noite" />
+        </div>
+        <div class="cover-line">
+          <span>Instituição</span>
+          <p>UNINASSAU</p>
+        </div>
+        <div class="cover-line">
+          <span>Autor</span>
+          <p>Luan Lima de Queiroz</p>
+        </div>
+        <div class="row">
+          <button class="btn" type="submit">Abrir o caderno</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="view-caderno" class="sheet hidden">
+      <p class="kicker" id="ficha"></p>
+      <h1 id="saudacao">Bom retorno.</h1>
+      <p class="lede" id="resumo"></p>
+      <div class="row" style="margin-top:24px">
+        <div class="stat"><small>XP</small><b id="xp">0</b></div>
+        <div class="stat"><small>Missões</small><b id="miss">0/3</b></div>
+        <div class="stat"><small>Precisão</small><b id="prec">—</b></div>
+      </div>
+      <div class="row">
+        <button class="btn" data-go="trilha" type="button">Ir à trilha</button>
+        <button class="btn ghost" data-go="ranking" type="button">Ranking da turma</button>
+      </div>
+    </section
+      
+<section id="view-trilha" class="sheet hidden">
+      <p class="kicker">Currículo</p>
+      <h1>Trilha do caderno</h1>
+      <p class="lede">Três missões neste caderno: conceitos, natureza das contas e a equação patrimonial.</p>
+      <div id="lista-trilha" style="margin-top:24px"></div>
+    </section>
+
+    <section id="view-jogo" class="sheet hidden">
+      <p class="kicker" id="jogo-kicker">Missão</p>
+      <h2 id="jogo-titulo"></h2>
+      <p id="jogo-status" class="lede"></p>
+      <div id="jogo-area" class="q"></div>
+    </section>
+
+    <section id="view-ranking" class="sheet hidden">
+      <p class="kicker">Turma</p>
+      <h1>Ranking</h1>
+      <p class="lede">Colegas de referência da mesma turma. O quadro fica neste aparelho.</p>
+      <ol class="rank" id="lista-rank"></ol>
+    </section
+      <section id="view-sobre" class="sheet hidden">
+      <p class="kicker">Projeto acadêmico · UNINASSAU</p>
+      <h1>Na ponta do lápis</h1>
+      <p class="tagline">Escola de contabilidade</p>
+      <p class="lede">Projeto de Luan Lima de Queiroz, aluno da UNINASSAU. Caderno digital de partidas dobradas: questões, classificação de contas e a equação patrimonial.</p>
+      <p class="lede">Conteúdo alinhado à estrutura conceitual (CPC 00). Não substitui a apostila nem a legislação vigente.</p>
+    </section>
+
+    <footer>
+      Na ponta do lápis · Projeto de Luan Lima de Queiroz, aluno da UNINASSAU · Ciências Contábeis
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
